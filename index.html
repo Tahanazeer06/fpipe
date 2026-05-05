@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My DevOps App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        h1 {
+            color: #333;
+        }
+        .server {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .time {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 Welcome to My Web Application</h1>
+        <p>This page is deployed using DevOps pipeline.</p>
+
+        <div class="server">
+            Server: <span id="server-name">Loading...</span>
+        </div>
+
+        <div class="time">
+            Current Time: <span id="time"></span>
+        </div>
+    </div>
+
+    <script>
+        // Simulate server name (for demo)
+        document.getElementById("server-name").innerText = window.location.hostname;
+
+        // Show current time
+        function updateTime() {
+            const now = new Date();
+            document.getElementById("time").innerText = now.toLocaleString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+</body>
+</html>
